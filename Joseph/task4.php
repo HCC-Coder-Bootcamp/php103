@@ -1,24 +1,22 @@
-<?php 
+<?php
 
 $inputNumber = (int)readline('Give me a number.' . PHP_EOL);
 
-echo "The answer is :";
-
-if ($inputNumber = 0) {
-	echo "REJECT!";
+if ($inputNumber === 0) {
+	echo "REJECT!" . PHP_EOL;
 } else {
 
 	if ($inputNumber > 0) {
-		echo "Positive";
+		$greeting = "Positive";
 	} else if ($inputNumber < 0) {
-		echo "Negetive";
+		$greeting = "Negetive";
 	}
 
-	echo (string)" and ";
-
-	if ($inputNumber % 2 == 0) {
-		echo "Even";
+	if ($inputNumber % 2 === 0) {
+		$evenOrOdd = "Even";
 	} else {
-		echo "Odd";	
+		$evenOrOdd = "Odd";
 	}
+
+	echo "$greeting and $evenOrOdd";
 }

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $userName = readline('What is your name?' . PHP_EOL);
 
