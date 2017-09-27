@@ -1,6 +1,6 @@
 <?php
 
-$inputWorkAs = readline('Do you work as Part Time? True or False?' . PHP_EOL);
+$inputWorkAs  = readline('Do you work as Part Time? True or False?' . PHP_EOL);
 $workingHours = (int)readline('In total, how many hours do you work?' . PHP_EOL);
 
 if ($inputWorkAs === True) {
