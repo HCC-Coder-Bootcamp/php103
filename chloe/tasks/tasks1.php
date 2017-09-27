@@ -9,7 +9,7 @@
 		echo "ERROR" . PHP_EOL;
 	}
 
-	else if ($input < 0) {
+	else if ($input <= 0) {
 		echo "you are sikina" . PHP_EOL;
 	}
 
@@ -30,6 +30,6 @@
 		}
 
 		else {
-			echo "error" . PHP_EOL;
+			echo "ERROR" . PHP_EOL;
 		}
  
