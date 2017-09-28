@@ -7,31 +7,34 @@ $userAlice = "alice";
 $passAlice = 12345;
 
 $userBob = "bob";
-$passBob = 23456;
+$passBob = (int)"23456";
 
 $userCindy = "cindy";
 $passCindy = "a2ncd";
 
 if ($userName == $userAlice) {
 	
-	if ($userPassword == $passAlice)
-		echo "Hello, Alice!";
-	else
+	if ($userPassword == $passAlice) {
+		$greeting = "Hello, Alice!";
+	} else {
 		echo "REJECT!";
+	}
 }
 
 if ($userName == $userBob) {
 	
-	if ($userPassword == $passBob)
-		echo "Hello, Bob!";
-	else
+	if ($userPassword == $passBob) {
+		$greeting = "Hello, Bob!";
+	} else {
 		echo "REJECT!";
+	}
 }
 
 if ($userName == $userCindy) {
 	
-	if ($userPassword == $passCindy)
-		echo "Hello, Cindy!";
-	else
+	if ($userPassword == $passCindy) {
+		$greeting = "Hello, Cindy!";
+	} else {
 		echo "REJECT!";
+	}
 }

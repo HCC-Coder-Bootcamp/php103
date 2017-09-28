@@ -1,50 +1,39 @@
 <?php
 
-$inputWorkAs  = (int)readline('Do you work as Part Time? True(1) or False(0)?' . PHP_EOL);
-$workingHours = (int)readline('In total, how many hours do you work?' . PHP_EOL);
+$workerName = readline('What is your name, worker?' . PHP_EOL);
 
-$fullTimeSalary = 2000;
-$fullTimeHour   = 160;
-$otHourlyRate   = 40;
-$cutCostSalary  = 12.5;
-$partTimeRate   = 10;
+echo "Hi $workerName! Is time to get your salary!" . PHP_EOL;
 
-if ($inputWorkAs === 1) {
-	if ($workingHours > 0 && $workingHours < $fullTimeHour) {
-		
-		$totalAmount = $workingHours * $partTimeRate;
-		echo "Your salary is RM $totalAmount.";
+$workingHours = (int)readline('In a week, how many hours do you work?' . PHP_EOL);
 
-	} else if ($workingHours > 0 && $workingHours >= $fullTimeHour) {
-		
-		$totalAmount = $workingHours * $partTimeRate;
-		echo "Your salary is RM $totalAmount. I would like you to join us as a full-time worker.";
+$fullTimeSalary    = 2000;
+$weeklyWorkingHour = 40;
+$otHourlyRate      = 40;
+$cutCostSalary     = 12.5;
+$partTimeRate      = 10;
+$workingWeek       = 4;
 
-	} else if ($workingHours == 0) {
+if ($workingHours < $weeklyWorkingHour) {
+
+	if ($workingHours == 0) {
 		echo "You are fired!!";
 	} else if ($workingHours < 0) {
 		echo "Stop playing with me!";
-	}
+	} else {
+		
+		$totalAmount = ($workingHours * $partTimeRate) * $workingWeek;
+		echo "There you go. Your salary is RM $totalAmount.";
+	} 
 } else {
-	if ($workingHours > $fullTimeHour) {
+	
+	if ($workingHours == $weeklyWorkingHour) {
+		echo "There you go. Your salary is RM $fullTimeSalary.";
+	} else if ($workingHours > $weeklyWorkingHour) {
 		
-		$otHours = $workingHours % $fullTimeHour;
-		$otSalary = $otHours * $otHourlyRate;
+		$otHours = $workingHours % $weeklyWorkingHour;
+		$otSalary = ($otHours * $otHourlyRate) * $workingWeek;
 		$totalAmount = $fullTimeSalary + $otSalary;
-		echo "Your Salary is RM $totalAmount.";
+		echo "There you go. Your Salary is RM $totalAmount.";
 
-	} else if ($workingHours == $fullTimeHour) {
-		echo "Your salary is RM $fullTimeSalary.";
-	} else if ($workingHours < $fullTimeHour && $workingHours > 0) {
-		
-		$lazyTime = $fullTimeHour - $workingHours;
-		$cutSalary = $lazyTime * $cutCostSalary;
-		$leftOverSalary = $fullTimeSalary - $cutSalary;
-		echo "Lazy People!! The boss cut your salary into RM $leftOverSalary.";
-		
-	} else if ($workingHours == 0) {
-		echo "You are fired!!";
-	} else if ($workingHours < 0) {
-		echo "Stop playing with me!";
 	}
 }

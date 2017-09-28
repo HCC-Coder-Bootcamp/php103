@@ -10,16 +10,15 @@ if ($remainingMinutes >= 60 || $hours < 0 || $hours > 23) {
 	echo "ERROR!";
 } else {
 	
-	if ($hours < 6)
+	if ($hours < 6) {
 		$greeting = "Please have a rest, $userName";
-	else if ($hours < 12)
+	} else if ($hours < 12) {
 		$greeting = "Good Morning, $userName";
-	else if ($hours < 16)
+	} else if ($hours < 16) {
 		$greeting = "Good Afternoon, $userName";
-	else if ($hours < 22)
+	} else if ($hours < 22) {
 		$greeting = "Good Evening, $userName";
-	else
+	} else
 		$greeting = "Good Night, $userName";
-
-	echo $greeting;
 }
+echo $greeting;
