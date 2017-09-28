@@ -1,7 +1,6 @@
-<?php 
+<?php
 
-$userName = readline('What is your name?' . PHP_EOL);
-
+$userName  = readline('What is your name?' . PHP_EOL);
 $timeInput = (int)readline('Please enter the international time.' . PHP_EOL);
 
 $remainingMinutes = $timeInput % 100;
