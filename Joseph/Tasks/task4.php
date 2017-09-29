@@ -1,6 +1,8 @@
 <?php
 
-$inputNumber = (int)readline('Give me a number.' . PHP_EOL);
+echo "Hi user! This is a number categoriser." . PHP_EOL . "When you give me a number, I will let you know whether it is positive or negetive and even or odd." . PHP_EOL;
+
+$inputNumber = (int)readline('So, what is your number?' . PHP_EOL);
 
 if ($inputNumber === 0) {
 	echo "REJECT!" . PHP_EOL;
@@ -18,5 +20,5 @@ if ($inputNumber === 0) {
 		$evenOrOdd = "Odd";
 	}
 
-	echo "$greeting and $evenOrOdd";
+	echo "Great! The answer is $greeting and $evenOrOdd.";
 }
