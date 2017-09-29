@@ -22,7 +22,7 @@ if ($LocationResult <= 10 AND $LocationResult > 2) {
 
 } else if ($LocationResult <= 2) {
 
-	echo "BEEP~ BEEP~ BEEP~ BEEP~!" . PHP_EOL;
+	echo "\x07 Beep~Beep~Beep~Beep~" . PHP_EOL;
 
 }else{
 
