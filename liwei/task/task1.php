@@ -23,5 +23,3 @@ if ($TimeHour <= 11 AND $TimeHour >= 0 AND $TimeMin < 60) {
 	echo "What?!!";
 	
 }
-
-?>
