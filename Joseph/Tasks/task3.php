@@ -4,19 +4,19 @@ $userName  = readline('What is your name?' . PHP_EOL);
 $timeInput = (int)readline('Please enter the international time.' . PHP_EOL);
 
 $remainingMinutes = $timeInput % 100;
-$hours = ($timeInput - $remainingMinutes) / 100;
 
-if ($remainingMinutes >= 60 || $hours < 0 || $hours > 23) {
-	echo "ERROR!";
+if ($remainingMinutes >= 60 || $timeInput < 0 ||
+	$timeInput >= 2400) {
+	$greeting = "ERROR!";
 } else {
 	
-	if ($hours < 6) {
+	if ($timeInput < 0600) {
 		$greeting = "Please have a rest, $userName";
-	} else if ($hours < 12) {
+	} else if ($timeInput < 1200) {
 		$greeting = "Good Morning, $userName";
-	} else if ($hours < 16) {
+	} else if ($timeInput < 1600) {
 		$greeting = "Good Afternoon, $userName";
-	} else if ($hours < 22) {
+	} else if ($timeInput < 2200) {
 		$greeting = "Good Evening, $userName";
 	} else
 		$greeting = "Good Night, $userName";
