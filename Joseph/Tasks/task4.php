@@ -5,7 +5,7 @@ echo "Hi user! This is a number categoriser." . PHP_EOL . "When you give me a nu
 $inputNumber = (int)readline('So, what is your number?' . PHP_EOL);
 
 if ($inputNumber === 0) {
-	echo "REJECT!" . PHP_EOL;
+	echo "REJECT!";
 } else {
 
 	if ($inputNumber > 0) {
