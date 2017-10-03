@@ -19,7 +19,7 @@
 	}
 
 	else {
-		echo 'This year is not leap year';
+		echo 'ERROR!';
 	}
 
  ?>
