@@ -33,7 +33,11 @@ $Amount600Above = $Surcharge600Above + $Unit600Above;
 
 /////////////////////////////////////////////////////
 
-if ($Unit >= 84 AND $Unit <= 199){
+if ($Unit > 0 AND $Unit <= 83){
+
+	echo "Your bill is $100";
+
+}else if ($Unit >= 84 AND $Unit <= 199){
 
 	echo "Unit per $1.50" .PHP_EOL.
 		 "Total Amount : $ $Unit1To199";
@@ -63,5 +67,5 @@ if ($Unit >= 84 AND $Unit <= 199){
 
 }else{
 
-	echo "Sorry, minimum bill is $100";
+	echo "ERROR";
 }

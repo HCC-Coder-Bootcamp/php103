@@ -1,20 +1,23 @@
 <?php 
 
-	$input_x = readline('distance_x'. PHP_EOL);
-	$input_y = readline('distance_y ' . PHP_EOL);
+	$input_x = readline('x'. PHP_EOL);
+	$input_y = readline('y ' . PHP_EOL);
 
 	$mine_x = 79;
 	$mine_y = 52;
 
+	$h        = $mine_x - $input_x;
+	$l        = $mine_y - $input_y;
+	$p1       = pow($h, 2) + pow($l, 2);
+	$distance = sqrt(p1);
 
-	if ($input_x >= 10) {
-		echo "SUSPICIOS_x" . PHP_EOL;
-	}	else if ($input_x <= 2 )
-		echo "\x07 ";
 
-
-	if ($input_y >= 10){
-		echo "SUSPICIOS_y" . PHP_EOL;
-	}	else if ($input_y <= 2 )
-		echo "\x07";
+	if ($distance <= 2) {
+		$message ='see you at heaven.';
+	}	else if ($distance <= 10 )
+			$message = '\x07';
+		else {
+			$message = 'You are safe.';
+		}
+echo $message;
 

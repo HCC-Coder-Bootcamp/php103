@@ -6,16 +6,16 @@ $inputNumber1 = (int)readline('What is the first number? ' . PHP_EOL);
 $inputNumber2 = (int)readline('What is the second number?' . PHP_EOL);
 $inputNumber3 = (int)readline('What is the last number?  ' . PHP_EOL);
 
-if ($inputNumber1 > $inputNumber2) {
-	if ($inputNumber1 > $inputNumber3) {
+if ($inputNumber1 >= $inputNumber2) {
+	if ($inputNumber1 >= $inputNumber3) {
 		$answer = $inputNumber1;
 	}
-} else if ($inputNumber2 > $inputNumber1) {
-	if ($inputNumber2 > $inputNumber3) {
+} else if ($inputNumber2 >= $inputNumber1) {
+	if ($inputNumber2 >= $inputNumber3) {
 		$answer = $inputNumber2;
 	}
-} else if ($inputNumber3 > $inputNumber1) {
-	if ($inputNumber3 > $inputNumber2) {
+} else if ($inputNumber3 >= $inputNumber1) {
+	if ($inputNumber3 >= $inputNumber2) {
 		$answer = $inputNumber3;
 	}
 }
