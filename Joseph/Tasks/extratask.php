@@ -19,5 +19,4 @@ if ($inputNumber1 >= $inputNumber2) {
 		$answer = $inputNumber3;
 	}
 }
-
 echo "$answer is the largest";

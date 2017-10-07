@@ -1,6 +1,7 @@
 <?php
 
-echo "Hi soldier! This is a radar distance detector." . PHP_EOL . "You can use it to detect you enemy location." . PHP_EOL;
+echo "Hi soldier! This is a radar distance detector." . PHP_EOL .
+"You can use it to detect you enemy location." . PHP_EOL;
 
 $enemyDistanceX = (int)readline('Please enter the X position of your enemy.' . PHP_EOL);
 $enemyDistanceY = (int)readline('Please enter the Y position of your enemy.' . PHP_EOL);

@@ -17,24 +17,21 @@ if ($userName == $userAlice) {
 	if ($userPassword == $passAlice) {
 		$greeting = "Hello, Alice!";
 	} else {
-		echo "REJECT!";
+		$greeting = "REJECT!";
 	}
-}
-
-if ($userName == $userBob) {
+} else if ($userName == $userBob) {
 	
 	if ($userPassword == $passBob) {
 		$greeting = "Hello, Bob!";
 	} else {
-		echo "REJECT!";
+		$greeting = "REJECT!";
 	}
-}
-
-if ($userName == $userCindy) {
+} else if ($userName == $userCindy) {
 	
 	if ($userPassword == $passCindy) {
 		$greeting = "Hello, Cindy!";
 	} else {
-		echo "REJECT!";
+		$greeting = "REJECT!";
 	}
 }
+echo $greeting;

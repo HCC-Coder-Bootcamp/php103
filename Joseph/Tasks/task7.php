@@ -1,6 +1,7 @@
 <?php
 
-echo "Hi student! This is a test score validator." . PHP_EOL . "Let me know what is your class and test score." . PHP_EOL;
+echo "Hi student! This is a test score validator." . PHP_EOL .
+"Let me know what is your class and test score." . PHP_EOL;
 
 $inputClass = readline('What is your class?' . PHP_EOL);
 $inputScore = (int)readline('What is your score?' . PHP_EOL);
