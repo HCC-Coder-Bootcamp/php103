@@ -2,18 +2,14 @@
 
 	$yrs = readline('Input years : ' . PHP_EOL . '');
 
-	if ($yrs % 400 == 0) {
+	if ($yrs % 4 == 0) {
 
-		if ($yrs % 4 == 0) {
-
-			$result = 'is';
-		} else {
-
+		if ($yrs % 100 == 0 && $yrs % 400 != 0) {
 			$result = 'is not';
+		} else {
+			$result = 'is';
 		}
-
-	} else {
-
+	}else {
 		$result = 'is not';
 	}
 
